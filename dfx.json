@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Agro1_backend": {
+      "main": "src/Agro1_backend/main.mo",
+      "type": "motoko"
+    },
+    "Agro1_frontend": {
+      "dependencies": [
+        "Agro1_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Agro1_frontend/src/index.html"
+      },
+      "source": [
+        "src/Agro1_frontend/assets",
+        "dist/Agro1_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

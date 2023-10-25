@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agroguardian</title>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #greeting {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="logo2.svg" alt="DFINITY logo" />
+        <br />
+        <br />
+        <form id="nameForm">
+            <label for="name">Ingresa tu nombre: &nbsp;</label>
+            <input id="name" alt="Nombre" type="text" required />
+            <button type="submit">¡Haz clic!</button>
+        </form>
+        <section id="greeting"></section>
+
+        <script>
+            const form = document.getElementById('nameForm');
+            const greeting = document.getElementById('greeting');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                greeting.textContent = `Hola, ${name}! ¡Bienvenido a Agro1!`;
+            });
+        </script>
+    </main>
+</body>
+
+</html>
+
